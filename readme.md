@@ -1,19 +1,18 @@
-
+# VERSION
 PHP 8.1.11
 Composer 2.1.6
 Symfony 5.4.21 (Déso)
 BDD mysql (j'ai laissé le .env)
 
 
-SETUP
-php bin/console doctrine:database:create
+# SETUP
+- composer i
+- php bin/console doctrine:database:create
+- php bin/console make:migration
+- php bin/console doctrine:migrations:migrate
+- symfony server:start
 
-php bin/console make:migration
-
-php bin/console doctrine:migrations:migrate
-
-
-ROUTE
+# ROUTE
 - "/" Affichage des films
 - "/getall" Affiche touts les films
 - "/get/{id}" Affiche le film en prennant en compte l'id
